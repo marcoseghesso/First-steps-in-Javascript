@@ -1,0 +1,123 @@
+/* TODO Your CSS here. */
+
+* {
+    font-family: Verdana, Geneva, sans-serif;
+    color: #FEFEFE;
+}
+
+body {
+    background-image: url("./assets/bigleaves.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 20px 20px 0% 20px;
+}
+
+.container{
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: bold;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    text-align: center;
+    align-items: center;
+}
+
+.buttongrid {
+    margin: 10px 0px 10px 0px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto;
+    grid-column-gap: 5px;
+    grid-row-gap: 5px;
+}
+
+.buttongrid > .button {
+    background-color: transparent;
+    border: 1px solid white;
+    padding: 20px 5px 20px 5px;
+    transition: background-color 0.25s ease;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+}
+
+.button > img {
+    width: 64px;
+    height: 64px;
+}
+
+.buttongrid > .button:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.buttongrid > .button > * {
+    margin: 2px 0px 2px 0px;
+}
+
+.panel {
+    background-color: rgba(255, 255, 255, 0.75);
+    padding: 30px;
+    display: flex;
+    align-items: stretch;
+}
+
+.panel *{
+    color: #231F20;
+}
+
+.panellabel {
+    border-right: 1px dotted #706F6F;
+    margin-right: 5px;
+    padding-right: 10px;
+}
+
+.panellabel > p {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.infotable th{
+    color: rgb(155, 155, 155);
+}
+
+.infotable td{
+    color: rgb(83, 83, 83);
+}
+
+@media (max-width: 1200px){
+    .container{
+        width: 100%;
+    }
+}
+
+@media (max-width: 800px){
+    .panel{
+        flex-direction: column;
+        justify-content: start;
+        align-items: stretch;
+    }
+
+    .buttongrid {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto auto;
+    }
+
+    .panellabel {
+        border-right: none;
+        margin-right: 0px;
+        padding-right: 0px;
+        margin-bottom: 5px;
+        border-bottom: 1px dotted #706F6F;
+    }
+}
